@@ -1,0 +1,18 @@
+# Binary built files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+localvault-sync
+
+# SQLite files generated during test/runtime
+*.db
+*.db-journal
+*.db-wal
+data/
+
+# OS-specific
+.DS_Store
+Thumbs.db
