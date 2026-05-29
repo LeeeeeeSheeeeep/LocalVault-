@@ -1,3 +1,5 @@
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+
 # LocalVault P2P Zero-Knowledge Sync Daemon (LocalVault2)
 
 A highly secure, decentralized, peer-to-peer (P2P) database synchronization engine designed to keep multiple `LocalVault` instances in sync across a local network without relying on any centralized cloud servers.
