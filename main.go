@@ -509,9 +509,14 @@ func (ss *SyncServer) saveDocument(doc *NetworkDoc) error {
 		INSERT INTO documents (id, provider_id, source_id, doc_type, title, content, raw_data, url, author, created_at, updated_at)
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		ON CONFLICT(id) DO UPDATE SET
+			provider_id=excluded.provider_id,
+			source_id=excluded.source_id,
+			doc_type=excluded.doc_type,
 			title=excluded.title,
 			content=excluded.content,
 			raw_data=excluded.raw_data,
+			url=excluded.url,
+			author=excluded.author,
 			updated_at=excluded.updated_at
 	`
 	_, err = ss.db.Exec(query,
